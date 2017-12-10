@@ -10,22 +10,21 @@
     <header class="container">
       <h1><%= link_to "GeekOverFlow", root_path %> </h1>
       <% if user_signed_in? %>
-        <%= link_to "New post", new_post_path %>
+        <%= current_user.email %>
         <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-    <% else %>
+      <% else %>
         <%= link_to "Sign Up", new_user_registration_path %>
         <%= link_to "Sign In", new_user_session_path %>
     <% end %>
     </header>
-
     <div class="container">
       <p class="notice"><%= notice %></p>
   		<p class="alert"><%= alert %></p>
-
-
-  		<%= yield %>
+<%= yield %>
+      <h3><%= link_to "New post", new_post_path %></h3>
     </div>
-    <footer class="container">
+    <footer class="footer">
       CopyRight VladimirSychkov, GeekHub 2017, Ukraine
     </footer>
 	</body>
+</html>
