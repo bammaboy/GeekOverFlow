@@ -1,0 +1,10 @@
+<h1><%= @post.title %></h1>
+<p><%= @post.content %></p>
+<h3>Comments</h3>
+<p><%= @post.comments.count %> comments</p>
+<h4> <%= render @post.comments %></h4>
+<h3><%= render "comments/form"%></h3>
+<% if user_signed_in? %>
+  <%= link_to "Edit", edit_post_path, class: "btn btn-warning" %>
+  <%= link_to "Delete", post_path(@post), class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure?"} %>
+<% end %>

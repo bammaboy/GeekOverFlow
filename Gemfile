@@ -7,9 +7,10 @@ end
 
 
 # My GEM's
-gem 'haml'
-gem 'simple_form'
 gem 'devise'
+gem 'simple_form'
+
+gem 'bootstrap-sass', '~> 3.3.7'
 
 gem 'rails', '~> 5.1.4'
 gem 'sqlite3'

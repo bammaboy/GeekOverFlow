@@ -1,0 +1,8 @@
+<div class="ontainer-fluid">
+  <%= form_for @post do |f| %>
+    <%= f.text_field :title, size: "75x2"%><br /><br />
+    <%= f.text_area :content, size: "75x2" %><br />
+    <%= f.submit class: "btn btn-success"  %>
+    <%= link_to "Cancel", root_path, class: "btn btn-danger" %>
+  <%end%>
+</div>
